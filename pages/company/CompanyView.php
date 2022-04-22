@@ -98,7 +98,7 @@
          },
          success: function(message) {
            $('#modal1').modal('close');
-           location.reload();
+           $('#table-company').load('pages/company/CompanyController.php?action=all');
          }
        })
      }
@@ -122,7 +122,7 @@
          },
          success: function(message) {
            $('#modal1').modal('close');
-           location.reload();
+           $('#table-company').load('pages/company/CompanyController.php?action=all');
          }
        })
      }
@@ -132,12 +132,12 @@
          type: "POST",
          url: "pages/company/CompanyController.php?action=delete",
          data: {
-           status: 0,
+           avaible: 0,
            id: id
          },
          success: function(e) {
-            alert("Deletado");
-            location.reload();
+            M.toast({html: 'Deletado'})
+            $('#table-company').load('pages/company/CompanyController.php?action=all');
          }
        });
      }

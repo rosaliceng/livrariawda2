@@ -12,12 +12,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
       case 'delete':
         $id = $_POST['id'];
         unset($_POST['id']);
-        
+
         $crud->update($_POST, "books", "id={$id}");
         break;
       case 'find':
         $id = $_POST['id'];
-        $result = $books->find("id, name, author, launch, quantity, editora, company_id","books_view","id={$id}");
+        $result = $crud->find("id, name, author, launch, quantity, editora, company_id","books_view","id={$id}");
         echo json_encode($result);
         break;
       case 'update':

@@ -17,7 +17,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         break;
       case 'find':
         $id = $_POST['id'];
-        $result = $company->find("id, name, city","company","id={$id}");
+        $result = $crud->find("id, name, city","company","id={$id}");
         echo json_encode($result);
         break;
       case 'update':

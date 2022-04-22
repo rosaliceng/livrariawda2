@@ -18,7 +18,7 @@ foreach ($companies as $company) {
   echo "<td>".$company->name."</td>";
   echo "<td>".$company->city."</td>";
   echo "<td><button class='btn waves-effect blue' onclick='displayCompany({$company->id})'><i class='material-icons'>create</i></button></td>";
-  echo "<td><button class='btn waves-effect red' onclick='confirm(\"Deseja excluir usuário?\") ? deleteCompany({$company->id}) : \"\"'><i class='material-icons'>delete</i></button></td>";
+  echo "<td><button class='btn waves-effect red' onclick='confirm(\"Deseja excluir editora?\") ? deleteCompany({$company->id}) : \"\"'><i class='material-icons'>delete</i></button></td>";
   echo "</tr>";
 }
 ?>
